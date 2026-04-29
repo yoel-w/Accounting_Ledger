@@ -1,7 +1,13 @@
 package org.pluralsight;
 
+import javax.imageio.stream.ImageInputStream;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Accounting {
@@ -52,7 +58,7 @@ public class Accounting {
         //Option screen for deposit
         System.out.println("Are you ready to Deposit?");
         System.out.println("Y)Yes");
-        System.out.println("X) To go back");
+        System.out.println("X)Go back");
         String choice = scanner.nextLine().toLowerCase();
         System.out.println();
 
@@ -74,6 +80,15 @@ public class Accounting {
                     choice2 = scanner.nextLine().toLowerCase();
                     switch (choice2) {
                         case "y":
+                            String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                            String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+                            try(FileWriter fw = new FileWriter("transactions.csv", true))
+                            {
+                                fw.write(date + "|" + time + "|ATM Deposit|Kings Bank|" + amount);
+                            }
+                            catch (IOException e) {
+                                e.printStackTrace();
+                            }
                             HomeScreen();
                             break;
                         case "x":
@@ -97,17 +112,222 @@ public class Accounting {
 
             }
             private static void ledgerPage() {
+        while (true) {
+            System.out.println("Please selection one of the following");
+            System.out.println("-------------------------------------");
+            System.out.println("");
+            System.out.println("A)Show all transactions");
+            System.out.println("D)Show only deposits made");
+            System.out.println("P)Show only payments made");
+            System.out.println("R)Report/transactions search");
+            System.out.println("X)Go back");
+            String choice = scanner.nextLine().toLowerCase();
+            System.out.println();
+            switch (choice) {
+                case "a":
+                    allTransactions();
+                    break;
+                case"d":
+                    depositsPage();
+                    break;
+                    case "p":
+                        paymentsPage();
+                        break;
+                        case "r":
+                            reportPage();
+                            break;
+                            case "x":
+                                HomeScreen();
+                                break;
+                                default:
+                                    System.out.println("Invalid selection. Please try again");
+            }
+        }
 
             }
 
+private static void allTransactions() {
+    System.out.println();
+    System.out.println("=========== Transaction History ============");
+   System.out.println("");
+    System.out.println("--------------------------------------------------------------");
+
+    try {
+        FileReader fr = new FileReader("transactions.csv");
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+    }
+    catch (IOException e){
+        e.printStackTrace();
+    }
+    System.out.println("");
+    System.out.println("--------------------------------------------------------------");
+    System.out.println("");
+    System.out.println("B)Go back");
+    String choice = scanner.nextLine().toLowerCase();
+    System.out.println();
+    if (choice.equals("b")) {
+        ledgerPage();
+    } else {
+        System.out.println("Invalid selection. Please try again");
+    }
+}
 
 
+private static void depositsPage(){
+    System.out.println();
+    System.out.println("=========== Deposit History ============");
+    System.out.println("");
+    System.out.println("--------------------------------------------------------------");
+
+    try {
+        FileReader fr = new FileReader("transactions.csv");
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while ((line = br.readLine()) != null) {
+            if (line.contains("Deposit"))
+            {
+                System.out.println(line);
+            }
+        }
+    }
+    catch (IOException e){
+        e.printStackTrace();
+    }
+    System.out.println("");
+    System.out.println("--------------------------------------------------------------");
+    System.out.println("");
+    System.out.println("B)Go back");
+    String choice = scanner.nextLine().toLowerCase();
+    System.out.println();
+    if (choice.equals("b")) {
+        ledgerPage();
+    } else {
+        System.out.println("Invalid selection. Please try again");
+    }
+
+}
+private static void paymentsPage(){
+    System.out.println();
+    System.out.println("=========== Payment History ============");
+    System.out.println("");
+    System.out.println("--------------------------------------------------------------");
+
+    try {
+        FileReader fr = new FileReader("transactions.csv");
+        BufferedReader br = new BufferedReader(fr);
+        String line;
+        while ((line = br.readLine()) != null) {
+            if (line.contains("Payment"))
+            {
+                System.out.println(line);
+            }
+        }
+    }
+    catch (IOException e){
+        e.printStackTrace();
+    }
+    System.out.println("");
+    System.out.println("--------------------------------------------------------------");
+    System.out.println("");
+    System.out.println("B)Go back");
+    String choice = scanner.nextLine().toLowerCase();
+    System.out.println();
+    if (choice.equals("b")) {
+        ledgerPage();
+    } else {
+        System.out.println("Invalid selection. Please try again");
+    }
+}
+
+
+
+
+
+
+
+private static void reportPage(){
+    while (true) {
+        System.out.println("Please selection one of the following");
+        System.out.println("-------------------------------------");
+        System.out.println("");
+        System.out.println("1)Month to Date");
+        System.out.println("2)Previous Month");
+        System.out.println("3)Year to Date");
+        System.out.println("4)Previous Year");
+        System.out.println("5)Search by Vendor");
+        System.out.println("0)Go back");
+        String choice = scanner.nextLine().toLowerCase();
+        System.out.println();
+        switch (choice) {
+            case "1":
+                monthDatePage();
+                break;
+                case "2":
+                    previousMonthPage();
+                    break;
+                    case "3":
+                        yearDatePage();
+                        break;
+                        case "4":
+                            previousYearPage();
+                            break;
+                            case "5":
+                                vendorPage();
+                                break;
+                                case "0":
+                                    ledgerPage();
+                                    break;
+                                    default:
+                                        System.out.println("Invalid selection. Please try again");
+
+
+        }
+    }
+}
+private static void monthDatePage(){
+        System.out.println();
+        System.out.println("=========== Month to Date report ===========");
 
 
     }
 
+    private static void previousMonthPage() {
+        System.out.println();
+        System.out.println("=========== Month to Date report ===========");
+    }
+
+    private static void yearDatePage() {
+        System.out.println();
+        System.out.println("=========== Month to Date report ===========");
+    }
+
+    private static void previousYearPage() {
+        System.out.println();
+        System.out.println("=========== Month to Date report ===========");
+    }
+
+    private static void vendorPage() {
+        System.out.println();
+        System.out.println("=========== Month to Date report ===========");
+    }
 
 
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 

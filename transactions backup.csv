@@ -1,1 +1,111 @@
-date|time|description|vendor|category|amount|
+date|time|description|vendor|amount
+2025-10-02|08:14:22|Morning Coffee|Starbucks|5.75
+2025-10-03|09:00:00|Direct Deposit|Google|4269.56
+2025-10-03|18:30:00|Grocery Run|Walmart|112.50
+2025-10-05|09:22:15|Gasoline|Shell|54.00
+2025-10-06|12:15:45|Lunch Meeting|Chipotle|18.40
+2025-10-08|15:10:30|Home Decor|Target|89.99
+2025-10-10|10:05:12|Hardware Supplies|Home Depot|24.50
+2025-10-12|19:45:00|Dinner Out|Texas Roadhouse|65.25
+2025-10-14|11:30:20|Electronics Accessory|Best Buy|15.99
+2025-10-15|07:50:44|Quick Breakfast|Dunkin|8.15
+2025-10-17|09:00:00|Direct Deposit|Google|4269.56
+2025-10-17|14:20:10|Clothing Store|Old Navy|45.00
+2025-10-19|16:55:33|Monthly Membership|Costco|60.00
+2025-10-21|08:30:15|Daily Grind|Starbucks|4.50
+2025-10-24|17:40:22|Weekly Groceries|Publix|95.30
+2025-10-26|09:15:00|Car Wash|Shell|15.00
+2025-10-27|13:20:45|Fast Food|Chick-fil-A|12.80
+2025-10-29|11:00:10|Pet Supplies|PetSmart|34.15
+2025-10-31|09:00:00|Direct Deposit|Google|4269.56
+2025-10-31|20:00:00|Halloween Treats|Walmart|25.60
+2025-11-02|10:30:15|Streaming Subscription|Netflix|15.99
+2025-11-05|14:50:20|Garden Supplies|Home Depot|120.00
+2025-11-07|18:15:10|Pizza Night|Domino's|28.50
+2025-11-09|12:40:00|Kitchenware|Target|32.40
+2025-11-12|15:30:45|Pharmacy Essentials|CVS|14.25
+2025-11-14|09:00:00|Direct Deposit|Google|4269.56
+2025-11-14|11:20:30|Outdoor Gear|REI|85.00
+2025-11-16|07:45:00|Breakfast Sandwich|Panera Bread|11.50
+2025-11-18|19:10:22|Movie Tickets|AMC|35.00
+2025-11-20|13:05:15|Bulk Snacks|Costco|48.90
+2025-11-23|17:30:45|Apparel|Amazon|29.99
+2025-11-25|10:15:20|Cleaning Supplies|Walmart|18.75
+2025-11-27|12:00:00|Holiday Prep|Publix|210.40
+2025-11-28|09:00:00|Direct Deposit|Google|4269.56
+2025-11-29|14:40:15|Tech Gadget|Best Buy|199.99
+2025-12-01|09:30:12|Software Renewal|Adobe|20.99
+2025-12-03|18:55:30|Italian Dinner|Olive Garden|58.40
+2025-12-05|11:15:45|Housewares|Target|14.50
+2025-12-07|13:40:22|Gym Membership|Planet Fitness|10.00
+2025-12-09|15:20:10|Shoe Purchase|Nike|110.00
+2025-12-12|09:00:00|Direct Deposit|Google|4269.56
+2025-12-12|14:30:15|Gift Wrap|Amazon|12.30
+2025-12-14|17:20:44|Holiday Decorations|Home Depot|55.20
+2025-12-16|10:45:33|Tire Service|Costco|450.00
+2025-12-18|12:15:10|Sandwich|Subway|9.50
+2025-12-20|19:30:00|Party Supplies|Walmart|38.90
+2025-12-24|11:40:20|Last Minute Gifts|Target|125.60
+2025-12-26|09:00:00|Direct Deposit|Google|4269.56
+2025-12-27|14:10:45|App Store|Apple|4.99
+2025-12-29|16:50:33|Oil Change|Valvoline|65.00
+2026-01-02|08:30:15|Morning Kickstart|Starbucks|5.25
+2026-01-04|13:20:10|Book Purchase|Amazon|18.50
+2026-01-06|11:10:45|Health Supplements|GNC|35.20
+2026-01-08|18:45:00|Sushi Dinner|Local Japanese|75.00
+2026-01-09|09:00:00|Direct Deposit|Google|4269.56
+2026-01-10|12:05:15|New Workout Gear|Nike|65.99
+2026-01-12|09:40:30|Printer Ink|Best Buy|45.00
+2026-01-14|15:15:22|Stationery|Target|12.80
+2026-01-16|07:50:10|Breakfast Burrito|Chipotle|10.50
+2026-01-18|14:30:45|Groceries|Walmart|88.10
+2026-01-20|11:20:33|Vitamins|Walgreens|22.40
+2026-01-23|09:00:00|Direct Deposit|Google|4269.56
+2026-01-24|08:15:45|Iced Coffee|Starbucks|5.45
+2026-01-26|13:40:20|Kitchen Gadget|Amazon|27.99
+2026-01-28|10:05:10|Lumber|Home Depot|82.60
+2026-01-30|19:15:00|Friday Night Out|Cheesecake Factory|92.30
+2026-02-01|12:30:44|Auto Part|AutoZone|15.75
+2026-02-03|09:10:15|Renew Subscription|Spotify|10.99
+2026-02-05|15:45:33|Cosmetics|Ulta|42.10
+2026-02-06|09:00:00|Direct Deposit|Google|4269.56
+2026-02-07|11:20:10|Toiletries|CVS|19.50
+2026-02-11|14:15:22|Electronics Case|Amazon|18.99
+2026-02-13|18:30:45|Valentine Flowers|Whole Foods|45.00
+2026-02-15|10:50:12|House Cleaning Tools|Home Depot|32.40
+2026-02-17|13:15:10|Fast Food Lunch|Chick-fil-A|14.20
+2026-02-20|09:00:00|Direct Deposit|Google|4269.56
+2026-02-21|16:40:33|Home Storage|Target|55.00
+2026-02-23|11:05:15|Personal Care|Walmart|28.75
+2026-02-25|09:30:20|Transit Pass|Metrolink|120.00
+2026-02-27|19:00:44|Bar and Grill|TGI Fridays|48.30
+2026-03-01|12:20:10|Pet Food|PetSmart|52.99
+2026-03-05|15:30:45|Desk Lamp|Amazon|34.50
+2026-03-06|09:00:00|Direct Deposit|Google|4269.56
+2026-03-07|11:45:33|Seasonal Produce|Publix|42.10
+2026-03-09|17:15:22|Evening Yoga Class|Local Gym|20.00
+2026-03-11|10:05:10|Power Tools|Home Depot|145.00
+2026-03-13|14:40:00|Sneakers|Nike|85.00
+2026-03-17|13:20:45|St. Paddy's Supplies|Target|22.40
+2026-03-19|18:50:33|Takeout|Panda Express|15.60
+2026-03-20|09:00:00|Direct Deposit|Google|4269.56
+2026-03-21|11:30:15|Hardware|Best Buy|12.99
+2026-03-23|09:20:10|Car Fuel|Shell|48.50
+2026-03-25|16:15:45|Spring Wardrobe|Gap|74.20
+2026-03-27|12:05:33|Sub Sandwich|Jersey Mike's|13.40
+2026-03-29|10:45:22|Beverages|Costco|32.10
+2026-03-31|19:30:00|Celebration Dinner|Ruth's Chris|155.00
+2026-04-03|09:00:00|Direct Deposit|Google|4269.56
+2026-04-04|14:55:10|Household Bulk|Walmart|105.40
+2026-04-06|11:20:33|Online Subscription|Audible|14.95
+2026-04-08|17:40:22|Workout Apparel|Lululemon|98.00
+2026-04-10|13:15:45|Home Lighting|Home Depot|45.20
+2026-04-12|09:05:10|Car Wash|Shell|18.00
+2026-04-14|15:50:33|Tech Accessories|Amazon|24.15
+2026-04-16|11:45:15|Lunch Special|Chipotle|14.80
+2026-04-17|09:00:00|Direct Deposit|Google|4269.56
+2026-04-18|18:30:44|Dinner with Friends|Cheesecake Factory|65.20
+2026-04-22|10:35:22|Beauty Products|Sephora|52.00
+2026-04-24|14:20:45|Bulk Toiletries|Costco|88.40
+2026-04-26|12:05:33|Weekly Groceries|Publix|112.15
+2026-04-27|16:50:12|Electronics Repair|Best Buy|75.00
