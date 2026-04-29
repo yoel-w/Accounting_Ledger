@@ -34,10 +34,10 @@ public class Accounting {
                     depositPage();
                     break;
                     case "p":
-                        //payment
+                        paymentPage();
                         break;
                         case "l":
-                            //ledger page
+                            ledgerPage();
                             break;
                             case "x":
                                 System.out.println("Thank you for choosing Kings Bank. Have a great day!");
@@ -49,25 +49,62 @@ public class Accounting {
         }
 
         private static void depositPage() {
-        System.out.println("Enter amount to deposit: ");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
+        //Option screen for deposit
+        System.out.println("Are you ready to Deposit?");
+        System.out.println("Y)Yes");
         System.out.println("X) To go back");
-            double amount = Double.parseDouble(scanner.nextLine().toLowerCase().trim()); //google trim vs strip
-            try(
-                    FileWriter fw = new FileWriter("transactions.txt");
-                    writer.write(""
-                    )
+        String choice = scanner.nextLine().toLowerCase();
+        System.out.println();
 
-                writer.close();
+        //first switch to deposit
+        switch (choice) {
+            case "y":
+                String choice2 = "";
+                do {
+                    System.out.println("Please enter the amount you would like to deposit");
+                    double amount = scanner.nextDouble();
+                    scanner.nextLine();
+                    System.out.println("Your deposit total is: " + "$"+ amount);
+                    System.out.println("Is that correct?");
+                    System.out.println("Y)Yes (if selected, funds will be deposited and be sent back to home page)");
+                    System.out.println("N)No (Will try again)");
+                    System.out.println("X) Cancel");
+
+                    // Using do/while loop for retry if customer put wrong information
+                    choice2 = scanner.nextLine().toLowerCase();
+                    switch (choice2) {
+                        case "y":
+                            HomeScreen();
+                            break;
+                        case "x":
+                            HomeScreen();
+                            break;
+                        case "n":
+                            System.out.println("try again");
+                            break;
+                        default:
+                            System.out.println("Invalid selection. Please try again");
+                    }
+                } while (choice2.equals("n"));
+                break;
+
+        }
+            }
+
+            private static void paymentPage() {
+
+            System.out.println("Please enter debit card number");
+
+            }
+            private static void ledgerPage() {
+
+            }
+
+
+
+
+
     }
-        catch (IOException e)
-
-    {
-        System.out.println("ERROR: An unexpected error occurred. Please try again");
-        e.printStackTrace();
-    }
 
 
 
@@ -88,6 +125,8 @@ public class Accounting {
 
 
 
-}
+
+
+
 
 
