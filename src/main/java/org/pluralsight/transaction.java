@@ -76,4 +76,13 @@ public class transaction {
     public void setPayment(double payment) {
         this.payment = payment;
     }
+    public transaction(int date, int time, String description, String vendor, double amount, double deposit) {
+        this.date = date;
+        this.time = time;
+        this.description = description;
+        this.vendor = vendor;
+        this.amount = amount;
+        this.deposit = deposit;
+        this.dateTime = LocalDateTime.now();
+    }
 }
