@@ -28,7 +28,7 @@ public class Accounting {
             System.out.println("Welcome to Kings Bank ");
             System.out.println("-----------------------");
             System.out.println("D)Deposit");
-            System.out.println("P)Make Payment");
+            System.out.println("P)Payment");
             System.out.println("L)Ledger");
             System.out.println("X)Exit");
             System.out.println("Please enter your selection: ");
