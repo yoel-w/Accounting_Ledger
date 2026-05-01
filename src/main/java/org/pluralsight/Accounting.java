@@ -58,22 +58,27 @@ public class Accounting {
 
             private static void paymentPage() {
 
+                System.out.println("Are you ready to withdraw?");
+                System.out.println("Y)Yes");
+                System.out.println("X) To go back");
+                System.out.println("Please enter your selection: ");
                 String choice = scanner.nextLine().toLowerCase();
                 System.out.println();
 
-                //first switch to deposit
+
                 switch (choice) {
                     case "y":
                         String choice2 = "";
                         do {
-                            System.out.println("Please enter the amount you would like to deposit");
+                            System.out.println("Please enter the amount you would like to withdraw");
                             double amount = scanner.nextDouble();
                             scanner.nextLine();
-                            System.out.println("Your deposit total is: " + "$"+ amount);
+                            System.out.println("Your withdraw total is: " + "$"+ amount);
                             System.out.println("Is that correct?");
-                            System.out.println("Y)Yes (if selected, funds will be deposited and be sent back to home page)");
+                            System.out.println("Y)Yes (if selected, funds will be withdrawn and be sent back to home page)");
                             System.out.println("N)No (Will try again)");
                             System.out.println("X) Cancel");
+                            System.out.println("Please enter your selection: ");
                             // Using do/while loop for retry if customer put wrong information
                             choice2 = scanner.nextLine().toLowerCase();
                             switch (choice2) {
@@ -82,16 +87,14 @@ public class Accounting {
                                     String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
                                     try(FileWriter fw = new FileWriter("transactions.csv", true))
                                     {
-                                        fw.write(date + "|" + time + "|ATM Deposit|Kings Bank|" + amount);
+                                        fw.write("\n"+ date + "|" + time + "|ATM withdraw|Kings Bank ATM|" + amount);
                                     }
                                     catch (IOException e) {
                                         e.printStackTrace();
                                     }
-                                    HomeScreen();
-                                    break;
+                                    return;
                                 case "x":
-                                    HomeScreen();
-                                    break;
+                                    return;
                                 case "n":
                                     System.out.println("try again");
                                     break;
@@ -113,6 +116,7 @@ public class Accounting {
                     System.out.println("P)Show only payments made");
                     System.out.println("R)Report/transactions search");
                     System.out.println("X)Go back");
+                    System.out.println("Please enter your selection: ");
                     String choice = scanner.nextLine().toLowerCase();
                     System.out.println();
                     switch (choice) {
@@ -213,7 +217,7 @@ private static void paymentsPage(){
         BufferedReader br = new BufferedReader(fr);
         String line;
         while ((line = br.readLine()) != null) {
-            if (line.contains("Payment"))
+            if (line.contains("withdrawn"))
             {
                 System.out.println(line);
             }
@@ -233,6 +237,7 @@ private static void paymentsPage(){
     } else {
         System.out.println("Invalid selection. Please try again");
     }
+
 }
 
 
@@ -252,6 +257,7 @@ private static void reportPage(){
         System.out.println("4)Previous Year");
         System.out.println("5)Search by Vendor");
         System.out.println("0)Go back");
+        System.out.println("Please enter your selection: ");
         String choice = scanner.nextLine().toLowerCase();
         System.out.println();
         switch (choice) {
@@ -555,6 +561,9 @@ private static void monthDatePage() {
 
     private  static void depositPage() {
 
+        System.out.println("Are you ready to Deposit?");
+        System.out.println("Y)Yes");
+        System.out.println("X) To go back");
         String choice = scanner.nextLine().toLowerCase();
         System.out.println();
 
@@ -571,6 +580,7 @@ private static void monthDatePage() {
                     System.out.println("Y)Yes (if selected, funds will be deposited and be sent back to home page)");
                     System.out.println("N)No (Will try again)");
                     System.out.println("X) Cancel");
+                    System.out.println("Please enter your selection: ");
                     // Using do/while loop for retry if customer put wrong information
                     choice2 = scanner.nextLine().toLowerCase();
                     switch (choice2) {
@@ -579,16 +589,14 @@ private static void monthDatePage() {
                             String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
                             try(FileWriter fw = new FileWriter("transactions.csv", true))
                             {
-                                fw.write(date + "|" + time + "|ATM Deposit|Kings Bank|" + amount);
+                                fw.write("\n" + date + "|" + time + "|ATM Deposit|Kings Bank|" + amount);
                             }
                             catch (IOException e) {
                                 e.printStackTrace();
                             }
-                            HomeScreen();
-                            break;
+                            return;
                         case "x":
-                            HomeScreen();
-                            break;
+                            return;
                         case "n":
                             System.out.println("try again");
                             break;
